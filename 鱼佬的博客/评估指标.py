@@ -4,6 +4,7 @@
 https://tianchi.aliyun.com/competition/entrance/231785/information  官网链接
 https://www.cnblogs.com/by-dream/p/9403984.html  搜索评价指标——NDCG
 """
+import numpy as np
 def getDCG(scores):
     return np.sum(
         np.divide(np.power(2, scores) - 1, np.log(np.arange(scores.shape[0], dtype=np.float32) + 2)),
